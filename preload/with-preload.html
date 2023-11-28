@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 	<head>
-		<script>let date1 = new Date().getMilliseconds();</script>
+		<script>let date1 = new Date().getTime();</script>
 	  <meta charset="utf-8" />
 		<title>JS and CSS preload example</title>
 
@@ -23,10 +23,30 @@
 		<h2 id="loadTime"></h2>
 		<script>
 			addEventListener("load", (event) => {
-				let date2 = new Date().getMilliseconds();
+				let date2 = new Date().getTime();
 				let loadTimeinMS = date2 - date1;
 				document.getElementById("loadTime").innerText = `Load time: ${loadTimeinMS} milliseconds`;
+
+				// var timing = window.performance.timing.loadEventEnd
+				// console.log(timing)
 			});
+
+			function asdf() {
+				// let entries = window.performance.getEntries();
+				// let firstResourceStart = entries[0].startTime;
+				// let lastResourceDone = entries[entries.length - 1].responseEnd;
+				// console.log(lastResourceDone - firstResourceStart)
+
+				setTimeout( () => {
+					var timing = window.performance.timing.loadEventEnd
+					// console.log(date1)
+					console.log(timing - date1)
+				}, 5000)
+
+			}
+			asdf()
+
+			
 		</script>
 	</body>
 </html>
