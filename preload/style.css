@@ -14,10 +14,22 @@ body {
   height: inherit;
 }
 
-h1 {
+h1, h2 {
   font-size: 2rem;
   letter-spacing: -1px;
   position: absolute;
 	color: #fff;
+	left: 25%;
+	right: 25%;
+	width: 50%;
 	text-align: center;
+}
+
+/* h1 {
+
+} */
+
+#loadTime {
+	bottom: 0;
+
 }

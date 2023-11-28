@@ -1,21 +1,32 @@
-<head>
-  <meta charset="utf-8" />
-  <title>JS and CSS preload example</title>
+<html !doctype html>
+	<head>
+	  <meta charset="utf-8" />
+		<title>JS and CSS preload example</title>
+		<script>let date1 = new Date().getMilliseconds();</script>
 
-  <link rel="preload" href="style.css" as="style" />
-  <link rel="preload" href="main.js" as="script" />
-	<link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" as="style">
+		<!-- PRELOADS -->
+		<link rel="preload" href="style.css" as="style" />
+		<link rel="preload" href="main.js" as="script" />
+		<link rel="preload" href="https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu4mxKKTU1Kg.woff2" as="font" type="font/woff2" crossorigin>
 
-	<!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
-<!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
-	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
 
-  <link rel="stylesheet" href="style.css" />
-</head>
+		<!-- STYLESHEETS -->
+		<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<h1>Style.css, main.js, and the google font are all preloaded</h1>
+		<canvas></canvas>
 
-<body>
-  <h1>Style.css, main.js, and the google font are all preloaded</h1>
-  <canvas></canvas>
+		<script src="main.js" defer></script>
 
-  <script src="main.js" defer></script>
-</body>
+		<h2 id="loadTime"></h2>
+		<script>
+		addEventListener("pageshow", (event) => {
+			let date2 = new Date().getMilliseconds();
+			let loadTimeinMS = date2 - date1;
+			document.getElementById("loadTime").innerText = `Load time: ${loadTimeinMS} milliseconds`;
+		});
+	</script>
+	</body>
+</html>
