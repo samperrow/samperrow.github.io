@@ -22,7 +22,7 @@
 
 		<h2 id="loadTime"></h2>
 		<script>
-			addEventListener("pageshow", (event) => {
+			addEventListener("load", (event) => {
 				let date2 = new Date().getMilliseconds();
 				let loadTimeinMS = date2 - date1;
 				document.getElementById("loadTime").innerText = `Load time: ${loadTimeinMS} milliseconds`;
