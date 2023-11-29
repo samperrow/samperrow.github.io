@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap'); */
 
 html, body {
   margin: 0;
@@ -18,7 +18,7 @@ h1, h2 {
   font-size: 2rem;
   letter-spacing: -1px;
   position: absolute;
-	color: #fff;
+	/* color: #fff; */
 	left: 25%;
 	right: 25%;
 	width: 50%;
