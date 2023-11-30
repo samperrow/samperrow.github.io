@@ -34,7 +34,7 @@
         link.onload = resolve;
         link.onerror = reject;
         document.head.appendChild(link);
-        if (fp_data.testing) console.log(link);
+        // if (fp_data.testing) console.log(link);
     });
 
     // Prefetch pages with a timeout
@@ -98,7 +98,6 @@
 
     // Queue that process requests based on max RPS (requests per second)
     const startQueue = () => setInterval(() => {
-			console.log('hi')
         Array.from(toPrefetch)
             .slice(0, fp_data.maxRPS)
             .forEach(url => {
@@ -223,3 +222,5 @@ if (typeof module === "object") {
 } else {
     pprhFlyingPages.Init(null);
 }
+
+// console.log('flying pages.js')
