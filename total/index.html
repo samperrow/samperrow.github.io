@@ -2,6 +2,7 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>All Together</title>
+		<script>let date1 = new Date().getMilliseconds();</script>
 		<meta name="viewport" content="width=device-width,initial-scale=1" />
 	
 		<!-- DNS Prefetch -->
@@ -39,8 +40,19 @@
 		<br>
 		<br>
 
+		<img src="pic1.webp" alt=""/>
+
 
 		<iframe width="560" height="315" src="https://www.youtube.com/embed/WVoekRTD1Ik?si=86WWrICppWnC4iFX" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+		<h2 id="loadTime" style="text-align: center;"></h2>
+		<script>
+			addEventListener("load", (event) => {
+				let date2 = new Date().getMilliseconds();
+				let loadTimeinMS = date2 - date1;
+				document.getElementById("loadTime").innerText = `Load time: ${loadTimeinMS} milliseconds`;
+			});
+		</script>
 	</body>
 </html>
