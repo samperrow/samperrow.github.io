@@ -11,6 +11,20 @@
 	</head>
 	<body>
 		<!-- your page content -->
+		<h1>DNS Prefetch</h1>
+		<p>This resolves the DNS of an external resource (“cross origin”)  ahead of time. Don’t use this to load resources on the current site.</p>
+		
+		<br>
+		<p>Enter only the domain name of the resource:</p>
+		<p>HTML example: &lt;link rel=”dns-prefetch” href=”https://ajax.googleapis.com”&gt;</p>
+		<p>HTTP Header: “Link: &lt;https://fonts.googleapis.com/&gt;; rel=dns-prefetch”</p>
+		<br>
+
+		<p>The above HTML can be used if the JS script below were loaded.</p>
+		&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"&gt;&lt;/script&gt;
+		<br>
+		<a href="https://developer.mozilla.org/en-US/docs/Web/Performance/dns-prefetch">https://developer.mozilla.org/en-US/docs/Web/Performance/dns-prefetch</a>
+		<br>
 
 		<iframe width="560" height="315" src="https://www.youtube.com/embed/WVoekRTD1Ik?si=86WWrICppWnC4iFX" title="YouTube video player" frameborder="0" allow="web-share" allowfullscreen></iframe>
 		

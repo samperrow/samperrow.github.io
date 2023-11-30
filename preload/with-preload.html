@@ -8,6 +8,7 @@
 		<link rel="preload" href="../style.css" as="style" />
 		<link rel="preload" href="main.js" as="script" />
 		<link rel="preload" href="https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu4mxKKTU1Kg.woff2" as="font" type="font/woff2" crossorigin>
+		<link re="preload" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"/>
 
 
 		<!-- STYLESHEETS -->
@@ -26,23 +27,13 @@
 				let date2 = new Date().getTime();
 				let loadTimeinMS = date2 - date1;
 				document.getElementById("loadTime").innerText = `Load time: ${loadTimeinMS} milliseconds`;
-
-				// var timing = window.performance.timing.loadEventEnd
-				// console.log(timing)
 			});
 
 			function asdf() {
-				// let entries = window.performance.getEntries();
-				// let firstResourceStart = entries[0].startTime;
-				// let lastResourceDone = entries[entries.length - 1].responseEnd;
-				// console.log(lastResourceDone - firstResourceStart)
-
 				setTimeout( () => {
 					var timing = window.performance.timing.loadEventEnd
-					// console.log(date1)
 					console.log(timing - date1)
 				}, 5000)
-
 			}
 			asdf()
 

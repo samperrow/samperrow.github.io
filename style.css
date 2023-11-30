@@ -17,14 +17,18 @@ body {
 h1, h2 {
   font-size: 2rem;
   letter-spacing: -1px;
-  position: absolute;
+  /* position: absolute; */
 	/* color: #fff; */
-	left: 25%;
+	/* left: 25%;
 	right: 25%;
-	width: 50%;
+	width: 50%; */
 	text-align: center;
 }
 
 #loadTime {
 	bottom: 0;
+}
+
+.code {
+	background-color: #ccc;
 }

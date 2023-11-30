@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+	<head>
+		<meta charset="utf-8" />
+		<title>All Together</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+	
+		<!-- Preload this stylesheet -->
+		<link rel="preload" href="../style.css" as="style"/>
+		<link rel="stylesheet" href="../style.css"/>
+
+		<!-- Preconnect this iframe -->
+		<link rel="preconnect" href="https://www.youtube.com"/>
+
+		<!-- Prerender -->
+		<script type="speculationrules">
+			{
+				"prerender": [
+					{
+						"source": "list",
+						"urls": ["second-page.html"]
+					}
+				]
+			}
+		</script>
+
+		
+	</head>
+	<body>
+		<h1>Using all 5 Resource Hints</h1>
+		<br>
+
+
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/WVoekRTD1Ik?si=86WWrICppWnC4iFX" title="YouTube video player" frameborder="0" allow="web-share" allowfullscreen></iframe>
+
+	
+	</body>
+</html

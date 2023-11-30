@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+	<head>
+		<script>let date1 = new Date().getMilliseconds();</script>
+		<meta charset="utf-8" />
+		<title>Preconnect</title>
+
+		<!-- STYLESHEETS -->
+		<!-- <link rel="stylesheet" href="../style.css" />
+		<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">  -->
+	</head>
+	<body>
+		<h1>Preconnect</h1>
+
+		<p>Used to resolve the DNS, TCP, and SSL handshake before the main resource is downloaded.</p>
+		<p>Enter only the domain name of the resource!</p>
+
+		<p>Preconnects can be utilized via HTML elements or in the HTTP header:</p>
+		<p>HTML: &lt;link rel=”preconnect” href=”https://ajax.googleapis.com”&gt;</p>
+		<p>HTTP Header: “Link: &lt;https://fonts.googleapis.com/&gt; rel=preconnect”</p>
+
+		<p>*Preconnect should only be used for the most critical resources. DNS prefetch should be used for the others.</p>
+		<p>*Some resources such as fonts are loaded in anonymous mode. In such cases you should set the crossorigin attribute with the preconnect hint. If you omit it, the browser will only perform the DNS lookup.</p>
+		<p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/rel/preconnect">https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/rel/preconnect</a></p>
+
+
+		<!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/WVoekRTD1Ik?si=86WWrICppWnC4iFX" title="YouTube video player" frameborder="0" allow="web-share" allowfullscreen></iframe> -->
+
+		<!-- <h2 id="loadTime"></h2>
+		<script>
+			addEventListener("load", (event) => {
+				let date2 = new Date().getMilliseconds();
+				let loadTimeinMS = date2 - date1;
+				document.getElementById("loadTime").innerText = `Load time: ${loadTimeinMS} milliseconds`;
+			});
+		</script> -->
+	</body>
+
+</html>
