@@ -11,27 +11,26 @@
 		<!-- Preconnect this iframe -->
 		<link rel="preconnect" href="https://www.youtube.com"/>
 
-		<!-- Prerender -->
-		<script type="speculationrules">
-			{
-				"prerender": [
-					{
-						"source": "list",
-						"urls": ["second-page.html"]
-					}
-				]
-			}
-		</script>
 
-		
+
+		<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+		<script src="../flying-pages.js"></script>
+		<!-- <script src="../d3.js"></script>
+		<script src="../three.js"></script> -->
 	</head>
 	<body>
 		<h1>Using all 5 Resource Hints</h1>
 		<br>
 
+		<h3>Automatically Prefetching both of these two links, with flying-pages.js</h3>
+		<a href="second-page.html">Second Page</a>
+		<br>
+		<a href="third-page.html">Third Page</a>
+		<br>
+		<br>
 
-		<iframe width="560" height="315" src="https://www.youtube.com/embed/WVoekRTD1Ik?si=86WWrICppWnC4iFX" title="YouTube video player" frameborder="0" allow="web-share" allowfullscreen></iframe>
-
-	
+		
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/WVoekRTD1Ik?si=86WWrICppWnC4iFX" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
 	</body>
 </html
